@@ -143,7 +143,7 @@ npm install -g odm-decision-forms
 odm-decision-forms --decision http://localhost:9090/DecisionService --console http://localhost:9090/res
 ```
 
-*Note:* we assume that your ODM server is running at http://localhost:9090. Please change it accordingly to fit your installation.
+*Note:* we assume that your ODM server is running at http://localhost:9090. You can change it to fit your installation.
 
 Then open the following URL:
 
