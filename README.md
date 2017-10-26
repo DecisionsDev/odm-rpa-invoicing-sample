@@ -114,15 +114,15 @@ This Decision Service is made of:
 
    * A decision table that determines a VAT from the product category
    
-   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/VAT_DT.png" width="75%"></img>
+   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/VAT_DT.png" width="50%"></img>
 
    * A decision table that determines a discount from the product quantity and category
    
-   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_DT.png" width="75%"></img>
+   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_DT.png" width="50%"></img>
    
    * A rule that sets a discount when the product category is 'groceries'
 
-   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_rule.png" width="75%"></img>
+   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_rule.png" width="30%"></img>
    
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
