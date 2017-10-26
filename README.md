@@ -40,14 +40,14 @@ Andrea is a reseller for Acme Retail. Each week, she orders a list of goods to J
 <a target="_blank" href="./assets/invoices.csv">a CSV file </a>
 listing the quantity and unit price of each item she wants to order.
 
-![CSV](./screenshots/Orders.png | width=75%)
+![CSV](./screenshots/Orders.png)
 
 Jack uses invoicely.com to register invoices corresponding to Andreas orders. 
 
 Depending on the quantity and type of goods, he applies a tax rate and a discount to each row in the orders CSV
 and save the result in his invoicely account.
 
-![Invoicely](./screenshots/Invoicely_Create.png | width=75%)
+![Invoicely](./screenshots/Invoicely_Create.png)
 
 
 ## Automating invoice creation with IBM RPA
