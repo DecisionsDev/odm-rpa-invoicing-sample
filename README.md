@@ -100,8 +100,29 @@ Here is the complete task:
 ## Step 2: Full automation with IBM RPA + IBM ODM
 
 Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
-This is where IBM ODM will come handy!
+This is where IBM ODM will come handy.
 
+### Creating a Decision Service
+
+In ODM, we create a [Decision Service](./assets/CompleteInvoice.zip) that takes a category, price and quantity as input, 
+and returns a discounted unit price and a tax rate and label.
+
+![ODM](./screenshots/ODM_RuleDesigner.png)
+
+This Decision Service is made of:
+
+   * A decision table that determines a VAT from the product category
+   
+   ![VAT DT](./screenshots/VAT_DT.png)
+
+   * A decision table that determines a discount from the product quantity and category
+   
+   ![Discount DT](./screenshots/Discount_DT.png)
+   
+   * A rule that sets a discount when the product category is 'groceries'
+
+   ![Discount Rule](./screenshots/Discount_rule.png)
+   
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
 We welcome contributions following [our guidelines](CONTRIBUTING.md).
