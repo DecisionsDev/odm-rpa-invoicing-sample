@@ -40,7 +40,7 @@ Andrea is a reseller for Acme Retail. Each week, she orders a list of goods to J
 <a target="_blank" href="./assets/invoices.csv">a CSV file </a>
 listing the quantity and unit price of each item she wants to order.
 
-![CSV](./screenshots/Orders.png)
+<a href="/ODMDev/odm-rpa-invoicing-sample/blob/master/screenshots/Orders.png" target="_blank"><img src="/ODMDev/odm-rpa-invoicing-sample/raw/master/screenshots/Orders.png" alt="CSV" style="max-width:75%;"></a>
 
 Jack uses invoicely.com to register invoices corresponding to Andreas orders. 
 
