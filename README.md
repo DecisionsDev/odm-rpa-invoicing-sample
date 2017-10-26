@@ -13,7 +13,8 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
   - [Step 2: Full automation with IBM RPA + IBM ODM](#step-2-full-automation-with-ibm-rpa-ibm-odm)
-     - [Creating a Decision Service](#creating-a-decision-service)
+     - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
+     - [Generating a form to run the Decision Service](#generating-a-form-to-run-the-decision-service)
 
 ---
 
@@ -103,7 +104,7 @@ Here is the complete task:
 Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
 This is where IBM ODM will come handy.
 
-### Creating a Decision Service
+### Create and deploy a Decision Service
 
 In ODM, we create a [Decision Service](./assets/CompleteInvoice.zip) that takes a category, price and quantity as input, 
 and returns a discounted unit price and a tax rate and label.
@@ -120,10 +121,33 @@ This Decision Service is made of:
    
    <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_DT.png" width="50%"></img>
    
-   * A specific rule that sets a discount when the product category is 'groceries'
+   * A specific rule that sets a discount when the product category is 'grocery'
 
    <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_rule.png" width="50%"></img>
-   
+
+Once you have downloaded the [decision service](./assets/CompleteInvoice.zip), open it in ODM Rule Designer, and deploy 
+it to Rule Execution Server.
+
+### Generating a form to run the Decision Service
+
+You now need to install and run the odm-decision-forms contrib, which will provide you with a 
+generated form to invoke the decision service.
+
+```bash
+npm install -g odm-decision-forms
+odm-decision-forms --decision http://localhost:9090/DecisionService --console http://localhost:9090/res
+```
+
+Then open the following URL:
+
+    http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset
+
+Enter some input values and hit 'Run Decision'.
+You should get the following result:
+
+[Decision Form](./screenshots/Decision_Form.png)
+
+
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
 We welcome contributions following [our guidelines](CONTRIBUTING.md).
