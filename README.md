@@ -39,11 +39,10 @@ Go to [invoicely.com](https://invoicely.com) and create an account
 * Log in to Control Room
 * Go to the *Credential Manager* tab
 * Click *Add Credential*
-* Name it **Invoicely**
+* Name it **invoicing**
 * Add the following attributes, with their corresponding values:
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
-   * **business**: name of the 'business' entity you created when creating your invoicely account.
 
 ## Scenario
 
