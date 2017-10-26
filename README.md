@@ -13,6 +13,7 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
   - [Step 2: Full automation with IBM RPA + IBM ODM](#step-2-full-automation-with-ibm-rpa-ibm-odm)
+     - [Creating a Decision Service](#creating-a-decision-service)
 
 ---
 
@@ -113,15 +114,15 @@ This Decision Service is made of:
 
    * A decision table that determines a VAT from the product category
    
-   ![VAT DT](./screenshots/VAT_DT.png)
+   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/VAT_DT.png" width="75%"></img>
 
    * A decision table that determines a discount from the product quantity and category
    
-   ![Discount DT](./screenshots/Discount_DT.png)
+   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_DT.png" width="75%"></img>
    
    * A rule that sets a discount when the product category is 'groceries'
 
-   ![Discount Rule](./screenshots/Discount_rule.png)
+   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_rule.png" width="75%"></img>
    
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
