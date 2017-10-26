@@ -14,7 +14,8 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
      - [Main Loop](#main-loop)
   - [Step 2: Full automation with IBM RPA + IBM ODM](#step-2-full-automation-with-ibm-rpa-ibm-odm)
      - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
-     - [Generating a form to run the Decision Service](#generating-a-form-to-run-the-decision-service)
+     - [Deploying a Decision bot](#deploying-a-decision-bot)
+     - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
 
 ---
 
@@ -126,9 +127,13 @@ This Decision Service is made of:
    <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_rule.png" width="50%"></img>
 
 Once you have downloaded the [decision service](./assets/CompleteInvoice.zip), open it in ODM Rule Designer, and deploy 
-it to Rule Execution Server.
+it to your local Rule Execution Server.
 
-### Generating a form to run the Decision Service
+### Deploying a Decision bot
+
+A Decision bot is an auto-generated form allowing to execute a Decision Service. Once this form is 
+generated, we will write an IBM RPA task to invoke it and get the tax and discounted price for each 
+order.
 
 You now need to install and run the odm-decision-forms contrib, which will provide you with a 
 generated form to invoke the decision service.
@@ -138,6 +143,8 @@ npm install -g odm-decision-forms
 odm-decision-forms --decision http://localhost:9090/DecisionService --console http://localhost:9090/res
 ```
 
+*Note:* we assume that your ODM server is running at http://localhost:9090. Please change it accordingly to fit your installation.
+
 Then open the following URL:
 
     http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset
@@ -146,6 +153,12 @@ Enter some input values and hit 'Run Decision'.
 You should get the following result:
 
 ![Decision Form](./screenshots/Decision_Form.png)
+
+### Invoke the Decision Bot from RPA
+
+We can review our main loop. Instead of prompting the user, we invoke our decision bot, passing
+the quantity, unit price and category of each order, and getting a tax rate, tax label, and 
+discounted price.
 
 
 # Issues and contributions
