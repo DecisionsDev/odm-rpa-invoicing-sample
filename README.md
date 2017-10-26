@@ -23,7 +23,7 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
 
 ### Required software
 
-Here is the list of software you need to install in order to run the demo:
+Here are the software you need to install in order to run the demo:
 
 * [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/)
 * [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm)
