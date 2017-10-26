@@ -59,7 +59,10 @@ and save the result in his invoicely account.
 
 ## Step 1: Automating invoice creation with IBM RPA
 
-Our first step consists of recording an Automation Anywhere task 
+Our first step consists of recording an Automation Anywhere task that reads the CSV file, and, for each row, connects 
+to [](http://invoicely.com) and create the corresponding invoice.
+
+Since the tax rate and discounted price are not present in the CSV, we prompt the user during the process in order to get those values.
 
 ### Creating the Invoice
 
