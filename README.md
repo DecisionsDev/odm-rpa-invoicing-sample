@@ -145,7 +145,7 @@ Then open the following URL:
 Enter some input values and hit 'Run Decision'.
 You should get the following result:
 
-[Decision Form](./screenshots/Decision_Form.png)
+![Decision Form](./screenshots/Decision_Form.png)
 
 
 # Issues and contributions
