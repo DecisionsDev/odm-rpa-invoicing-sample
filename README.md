@@ -35,7 +35,7 @@ Go to [](https://invoicely.com) and create an account
 * Go to the *Credential Manager* tab
 * Click *Add Credential*
 * Name it **Invoicely**
-* Add the following attributes, wit their corresponding values:
+* Add the following attributes, with their corresponding values:
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
    * **business**: name of the 'business' entity you created when creating your invoicely account.
@@ -50,7 +50,7 @@ listing the quantity and unit price of each item she wants to order.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Orders.png" width="75%"></img>
 
-Jack uses invoicely.com to register invoices corresponding to Andreas orders. 
+Jack uses invoicely.com to register invoices corresponding to Andrea's orders. 
 
 Depending on the quantity and type of goods, he applies a tax rate and a discount to each row in the orders CSV
 and save the result in his invoicely account.
