@@ -156,9 +156,11 @@ You should get the following result:
 
 ### Invoke the Decision Bot from RPA
 
-We can review our main loop. Instead of prompting the user, we invoke our decision bot, passing
+We can now review our [main loop](./assets/Main%20with%20ODM.atmx). Instead of prompting the user, we invoke our decision bot, passing
 the quantity, unit price and category of each order, and getting a tax rate, tax label, and 
 discounted price.
+
+![Main with ODM](./screenshots/Main_ODM.png)
 
 
 # Issues and contributions
