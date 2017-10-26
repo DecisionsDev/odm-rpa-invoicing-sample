@@ -5,13 +5,14 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
 ## Table of Contents
 
   - [Before you begin](#before-you-begin)
+     - [Required software](#required-software)
      - [Create an Invoicely account](#create-an-invoicely-account)
      - [Create a Credential vault in IBM RPA Control Room](#create-a-credential-vault-in-ibm-rpa-control-room)
   - [Scenario](#scenario)
-  - [Automating invoice creation with IBM RPA](#automating-invoice-creation-with-ibm-rpa)
+  - [Step 1: Automating invoice creation with IBM RPA](#step-1-automating-invoice-creation-with-ibm-rpa)
      - [Creating the Invoice](#creating-the-invoice)
-     - [Read the CSV](#read-the-csv)
-  - [Full automation with IBM RPA + IBM ODM](#full-automation-with-ibm-rpa-ibm-odm)
+     - [Main Loop](#main-loop)
+  - [Step 2: Full automation with IBM RPA + IBM ODM](#step-2-full-automation-with-ibm-rpa-ibm-odm)
 
 ---
 
