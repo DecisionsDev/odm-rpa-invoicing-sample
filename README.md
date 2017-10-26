@@ -47,7 +47,7 @@ Jack uses invoicely.com to register invoices corresponding to Andreas orders.
 Depending on the quantity and type of goods, he applies a tax rate and a discount to each row in the orders CSV
 and save the result in his invoicely account.
 
-<img border="1" src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
+<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
 
 ## Automating invoice creation with IBM RPA
 
