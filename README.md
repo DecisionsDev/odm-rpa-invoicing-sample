@@ -147,7 +147,7 @@ odm-decision-forms --decision http://localhost:9090/DecisionService --console ht
 
 Then open the following URL:
 
-    http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset
+[](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
 
 Enter some input values and hit 'Run Decision'.
 You should get the following result:
