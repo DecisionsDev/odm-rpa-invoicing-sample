@@ -87,17 +87,25 @@ The [Main.atmx](./assets/Main.atmx) task does the following:
 * Opens orders CSV file
 * For each row
    * Prompt the user with the tax rate
+   
+   ![Tax rate](./screenshots/Prompt_tax.png)
+   
    * Prompt the user with the discounted prixe
+   
+   ![Discounted price](./screenshots/Prompt_tax.png)
+   
    * Invoke the invoice creation task.
 
 ![Main](./screenshots/Main.png)
 
 ## Step 2: Full automation with IBM RPA + IBM ODM
 
+Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
+This is where IBM ODM will come handy!
 
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
-We welcome contibutions following [our guidelines](CONTRIBUTING.md).
+We welcome contributions following [our guidelines](CONTRIBUTING.md).
 
 # License
 The source files found in this project are licensed under the [Apache License 2.0](LICENSE).
