@@ -87,13 +87,14 @@ a unit price, a quantity, an order id, an item description, a tax rate, and a cl
 The [Main.atmx](./assets/Main.atmx) task does the following:
 * Opens orders CSV file
 * For each row
-   * Prompt the user with the tax rate
+   * Prompt the user with the tax rate and discounted price
    
-   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_tax.png" width="25%"></img>
-   
-   * Prompt the user with the discounted prixe
-   
-   <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_price.png" width="25%"></img>
+   <table>
+   <tr>
+   <td><img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_tax.png" width="35%"></img></td>
+   <td><img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_price.png" width="35%"></img></td>
+   </tr>
+   </table>
    
    * Invoke the invoice creation task.
 
