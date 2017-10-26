@@ -32,7 +32,7 @@ Here are the software you need to install in order to run the demo:
 
 ### Create an Invoicely account
 
-Go to [](https://invoicely.com) and create an account
+Go to [invoicely.com](https://invoicely.com) and create an account
 
 ### Create a Credential vault in IBM RPA Control Room
 
@@ -55,7 +55,7 @@ listing the quantity and unit price of each item she wants to order.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Orders.png" width="75%"></img>
 
-Jack uses invoicely.com to register invoices corresponding to Andrea's orders. 
+Jack uses [invoicely.com](invoicely.com) to register invoices corresponding to Andrea's orders. 
 
 Depending on the quantity and type of goods, he applies a tax rate and a discount to each row in the orders CSV
 and save the result in his invoicely account.
