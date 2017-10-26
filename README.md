@@ -28,6 +28,7 @@ Here is the list of software you need to install in order to run the demo:
 * [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/)
 * [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm)
 * [NodeJS](https://nodejs.org/en/download/)
+* [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms) Github contrib
 
 ### Create an Invoicely account
 
@@ -145,23 +146,21 @@ odm-decision-forms --decision http://localhost:9090/DecisionService --console ht
 
 *Note:* we assume that your ODM server is running at http://localhost:9090. You can change it to fit your installation.
 
-Then open the following URL:
+Then open the following URL: [http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
 
-   [http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
-
-Enter some input values and hit 'Run Decision'.
+Test the bot by entering some input values and hit 'Run Decision'.
 You should get the following result:
 
 ![Decision Form](./screenshots/Decision_Form.png)
 
 ### Invoke the Decision Bot from RPA
 
-We can now review our [main loop](./assets/Main%20with%20ODM.atmx). Instead of prompting the user, we invoke our decision bot, passing
-the quantity, unit price and category of each order, and getting a tax rate, tax label, and 
-discounted price.
+We can now amend our [main loop](./assets/Main%20with%20ODM.atmx). 
+
+Instead of prompting the user, we use standard RPA object cloning to invoke our decision bot, passing the quantity, unit 
+price and category of each order,  and getting a tax rate, tax label, and discounted price.
 
 ![Main with ODM](./screenshots/Main_ODM.png)
-
 
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
