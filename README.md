@@ -17,9 +17,17 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
 
 ## Before you begin
 
+### Required software
+
+Here is the list of software you need to install in order to run the demo:
+
+* [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/)
+* [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm)
+* [NodeJS](https://nodejs.org/en/download/)
+
 ### Create an Invoicely account
 
-Go to https://invoicely.com and create an account
+Go to [](https://invoicely.com) and create an account
 
 ### Create a Credential vault in IBM RPA Control Room
 
@@ -49,12 +57,14 @@ and save the result in his invoicely account.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
 
-## Automating invoice creation with IBM RPA
+## Step 1: Automating invoice creation with IBM RPA
+
+Our first step consists of recording an Automation Anywhere task 
 
 ### Creating the Invoice
 
-The [Create Invoice](./assets/Create%20Invoice.atmx) script creates an invoice in Invoicely, given
-a unit price, a quantity, an order id and an item description.
+The [Create Invoice.atmx](./assets/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
+a unit price, a quantity, an order id, an item description, a tax rate, and a client first name and last name.
 
 1. Login, create Invoice, set order ID, description and quantity
 
@@ -68,11 +78,18 @@ a unit price, a quantity, an order id and an item description.
 
     ![Create Invoice 1](./screenshots/CreateInvoice_03.png)
 
-### Read the CSV
+### Main Loop
 
-Since neither the tax nor the discount are part of the CSV, we ask them to the user through a prompt dialog
+The [Main.atmx](./assets/Main.atmx) task does the following:
+* Opens orders CSV file
+* For each row
+   * Prompt the user with the tax rate
+   * Prompt the user with the discounted prixe
+   * Invoke the invoice creation task.
 
-## Full automation with IBM RPA + IBM ODM
+![Main](./screenshots/Main.png)
+
+## Step 2: Full automation with IBM RPA + IBM ODM
 
 
 # Issues and contributions
