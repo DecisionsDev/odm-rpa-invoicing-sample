@@ -89,7 +89,7 @@ The [Main.atmx](./assets/Main.atmx) task does the following:
 * For each row
    * Prompt the user with the tax rate and discounted price
    
-| <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_tax.png" width="25%"></img> | <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_price.png" width="25%"></img> |
+    <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_tax.png" width="25%"></img> <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Prompt_price.png" width="25%"></img>
    
    * Invoke the invoice creation task.
 
