@@ -25,10 +25,11 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
 
 Here are the software you need to install in order to run the demo:
 
-* [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/)
-* [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm)
-* [NodeJS](https://nodejs.org/en/download/)
-* [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms) Github contrib
+* [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/) (IBM RPA) with Automation Anywhere leverages ODM to make it possible to automate desktop tasks that involve human judgements that can be captured as ODM decisions.
+* [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm) (ODM) provides a complete, easy-to-use system for automating day-to-day operational decisions and allows business people and IT staff to collaborate on business rules by using an interface and a language that are comfortable and intuitive for both.
+* [NodeJS](https://nodejs.org/en/download/): needed to run the contrib below
+* [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms): a github contrib from the ODM development team that 
+generates a form on top of a Decision Service.
 
 ### Create an Invoicely account
 
@@ -49,7 +50,7 @@ Go to [invoicely.com](https://invoicely.com) and create an account
 Jack is an accountant for Acme Retail, a small retailing company.
 
 Andrea is a reseller for Acme Retail. Each week, she orders a list of goods to Jack, sending him 
-<a target="_blank" href="./assets/invoices.csv">a CSV file </a>
+<a target="_blank" href="./assets/aa/invoices.csv">a CSV file </a>
 listing the quantity and unit price of each item she wants to order.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Orders.png" width="75%"></img>
@@ -70,7 +71,7 @@ Since the tax rate and discounted price are not present in the CSV, we prompt th
 
 ### Creating the Invoice
 
-The [Create Invoice.atmx](./assets/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
+The [Create Invoice.atmx](./assets/aa/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
 a unit price, a quantity, an order id, an item description, a tax rate, and a client first name and last name.
 
 1. Login, create Invoice, set order ID, description and quantity
@@ -87,7 +88,7 @@ a unit price, a quantity, an order id, an item description, a tax rate, and a cl
 
 ### Main Loop
 
-The [Main.atmx](./assets/Main.atmx) task does the following:
+The [Main.atmx](./assets/aa/Main.atmx) task does the following:
 * Opens orders CSV file
 * For each row
    * Prompt the user with the tax rate and discounted price
@@ -107,7 +108,7 @@ This is where IBM ODM will come handy.
 
 ### Create and deploy a Decision Service
 
-In ODM, we create a [Decision Service](./assets/CompleteInvoice.zip) that takes a category, price and quantity as input, 
+In ODM, we create a [Decision Service](./assets/odm/CompleteInvoice.zip) that takes a category, price and quantity as input, 
 and returns a discounted unit price and a tax rate and label.
 
 ![ODM](./screenshots/ODM_RuleDesigner.png)
@@ -154,7 +155,7 @@ You should get the following result:
 
 ### Invoke the Decision Bot from RPA
 
-We can now amend our [main loop](./assets/Main%20with%20ODM.atmx). 
+We can now amend our [main loop](./assets/aa/Main%20with%20ODM.atmx). 
 
 Instead of prompting the user, we use standard RPA object cloning to invoke our decision bot, passing the quantity, unit 
 price and category of each order,  and getting a tax rate, tax label, and discounted price.
