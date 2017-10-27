@@ -30,9 +30,9 @@ Here are the software you need to install in order to run the demo:
 
 * [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/) (IBM RPA)  leverages ODM to make it possible to automate desktop tasks that involve human judgements that can be captured as ODM decisions.
 * [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm) (ODM) provides a complete, easy-to-use system for automating day-to-day operational decisions and allows business people and IT staff to collaborate on business rules by using an interface and a language that are comfortable and intuitive for both.
-* [NodeJS](https://nodejs.org/en/download/): needed to run the contrib below
-* [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms): a github contrib from the ODM development team that 
-generates a form on top of a Decision Service.
+* [NodeJS](https://nodejs.org/en/download/): needed to run the npm package below
+* [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms): an open source npm package provided by the ODM development team 
+that generates a form on top of a Decision Service.
 
 ### Create an Invoicely account
 
@@ -55,25 +55,25 @@ Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client i
 
 ## Scenario
 
-Jack is an accountant for Acme Retail, a small retailing company.
+Jack works for Acme Retail, a small retailing company selling books, newspapers, computers, groceries and clothing.
 
-Andrea is a reseller for Acme Retail. Each week, she orders a list of goods to Jack, sending him 
-<a target="_blank" href="./assets/aa/invoices.csv">a CSV file </a>
-listing the quantity and unit price of each item she wants to order.
+Andrea is an office manager for a high school. Each week, she orders a list of goods to Jack, sending him 
+<a target="_blank" href="./assets/aa/orders.csv">a CSV file </a> listing the quantity, category and unit price of each 
+item she wants to order.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Orders.png" width="75%"></img>
 
-Jack uses [invoicely.com](invoicely.com) to register invoices corresponding to Andrea's orders. 
+Jack uses [invoicely.com](invoicely.com) to register invoices corresponding to Andrea's orders.
 
 Depending on the quantity and type of goods, he applies a tax rate and a discount to each row in the orders CSV
-and save the result in his invoicely account.
+and saves the result in his invoicely account.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
 
 ## Automating invoice creation with IBM RPA
 
 Our first step consists of recording an Automation Anywhere task that reads the CSV file, and, for each row, connects 
-to [](http://invoicely.com) and create the corresponding invoice.
+to [invoicely.com](http://invoicely.com) and create the corresponding invoice.
 
 Since the tax rate and discounted price are not present in the CSV, we prompt the user during the process in order to get those values.
 
