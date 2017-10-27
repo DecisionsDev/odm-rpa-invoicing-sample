@@ -25,7 +25,7 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
 
 Here are the software you need to install in order to run the demo:
 
-* [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/) (IBM RPA) with Automation Anywhere leverages ODM to make it possible to automate desktop tasks that involve human judgements that can be captured as ODM decisions.
+* [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/) (IBM RPA)  leverages ODM to make it possible to automate desktop tasks that involve human judgements that can be captured as ODM decisions.
 * [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm) (ODM) provides a complete, easy-to-use system for automating day-to-day operational decisions and allows business people and IT staff to collaborate on business rules by using an interface and a language that are comfortable and intuitive for both.
 * [NodeJS](https://nodejs.org/en/download/): needed to run the contrib below
 * [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms): a github contrib from the ODM development team that 
