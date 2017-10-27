@@ -142,9 +142,9 @@ This Decision Service is made of:
 Once you have downloaded the [decision service](./assets/CompleteInvoice.zip), open it in ODM Rule Designer, and deploy 
 it to your local Rule Execution Server.
 
-### Deploying a Decision bot
+### Deploying a Decision Bot
 
-A Decision bot is an auto-generated form allowing to execute a Decision Service. Once this form is 
+A Decision Bot is an auto-generated form allowing to execute a Decision Service. Once this form is 
 generated, we will write an IBM RPA task to invoke it and get the tax and discounted price for each 
 order.
 
@@ -169,7 +169,7 @@ You should get the following result:
 
 We can now amend our [main loop](./assets/aa/Main%20with%20ODM.atmx). 
 
-Instead of prompting the user, we use standard RPA object cloning to invoke our decision bot, passing the quantity, unit 
+Instead of prompting the user, we use standard RPA object cloning to invoke our Decision Bot, passing the quantity, unit 
 price and category of each order,  and getting a tax rate, tax label, and discounted price.
 
 ![Main with ODM](./screenshots/Main_ODM.png)
