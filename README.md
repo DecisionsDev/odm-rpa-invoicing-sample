@@ -8,14 +8,17 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
      - [Required software](#required-software)
      - [Create an Invoicely account](#create-an-invoicely-account)
      - [Create a Credential vault in IBM RPA Control Room](#create-a-credential-vault-in-ibm-rpa-control-room)
+     - [Copy the Automation Anywhere assets in your installation](#copy-the-automation-anywhere-assets-in-your-installation)
   - [Scenario](#scenario)
   - [Step 1: Automating invoice creation with IBM RPA](#step-1-automating-invoice-creation-with-ibm-rpa)
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
+     - [Running the demo](#running-the-demo)
   - [Step 2: Full automation with IBM RPA + IBM ODM](#step-2-full-automation-with-ibm-rpa-ibm-odm)
      - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
      - [Deploying a Decision bot](#deploying-a-decision-bot)
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
+     - [Running the demo](#running-the-demo)
 
 ---
 
@@ -44,6 +47,11 @@ Go to [invoicely.com](https://invoicely.com) and create an account
 * Add the following attributes, with their corresponding values:
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
+
+### Copy the Automation Anywhere assets in your installation
+
+Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client installation, typically 
+`C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks`
 
 ## Scenario
 
@@ -100,6 +108,10 @@ The [Main.atmx](./assets/aa/Main.atmx) task does the following:
 Here is the complete task:
 
 ![Main](./screenshots/Main.png)
+
+### Running the demo
+
+From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main.atmx`
 
 ## Step 2: Full automation with IBM RPA + IBM ODM
 
@@ -161,6 +173,10 @@ Instead of prompting the user, we use standard RPA object cloning to invoke our 
 price and category of each order,  and getting a tax rate, tax label, and discounted price.
 
 ![Main with ODM](./screenshots/Main_ODM.png)
+
+### Running the demo
+
+From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM.atmx`
 
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
