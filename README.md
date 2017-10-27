@@ -48,7 +48,7 @@ Go to [invoicely.com](https://invoicely.com) and create an account
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
 
-### Copy the Automation Anywhere assets in your installation
+### Copy demo assets to your IBM RPA installation
 
 Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client installation, typically 
 `C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks`
