@@ -57,7 +57,7 @@ Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client i
 
 Jack works for Acme Retail, a small retailing company selling books, newspapers, computers, groceries and clothing.
 
-Andrea is an office manager for a high school. Each week, she orders a list of goods to Jack, sending him 
+Andrea is a client of Acme Retail. Each week, she orders a list of goods to Jack, sending him 
 <a target="_blank" href="./assets/aa/orders.csv">a CSV file </a> listing the quantity, category and unit price of each 
 item she wants to order.
 
