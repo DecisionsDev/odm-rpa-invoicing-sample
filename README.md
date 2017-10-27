@@ -1,6 +1,6 @@
 # ODM RPA Invoicing sample
 
-This sample describe how to integrate IBM Operational Decision Manager with IBM RPA.
+This sample shows how to integrate IBM Operational Decision Manager with IBM RPA.
 
 ## Table of Contents
 
@@ -8,13 +8,13 @@ This sample describe how to integrate IBM Operational Decision Manager with IBM 
      - [Required software](#required-software)
      - [Create an Invoicely account](#create-an-invoicely-account)
      - [Create a Credential vault in IBM RPA Control Room](#create-a-credential-vault-in-ibm-rpa-control-room)
-     - [Copy the Automation Anywhere assets in your installation](#copy-the-automation-anywhere-assets-in-your-installation)
+     - [Copy demo assets to your IBM RPA installation](#copy-demo-assets-to-your-ibm-rpa-installation)
   - [Scenario](#scenario)
-  - [Step 1: Automating invoice creation with IBM RPA](#step-1-automating-invoice-creation-with-ibm-rpa)
+  - [Automating invoice creation with IBM RPA](#automating-invoice-creation-with-ibm-rpa)
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
      - [Running the demo](#running-the-demo)
-  - [Step 2: Full automation with IBM RPA + IBM ODM](#step-2-full-automation-with-ibm-rpa-ibm-odm)
+  - [Full automation with IBM RPA + IBM ODM](#full-automation-with-ibm-rpa-ibm-odm)
      - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
      - [Deploying a Decision bot](#deploying-a-decision-bot)
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
@@ -70,7 +70,7 @@ and save the result in his invoicely account.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
 
-## Step 1: Automating invoice creation with IBM RPA
+## Automating invoice creation with IBM RPA
 
 Our first step consists of recording an Automation Anywhere task that reads the CSV file, and, for each row, connects 
 to [](http://invoicely.com) and create the corresponding invoice.
@@ -113,7 +113,7 @@ Here is the complete task:
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main.atmx`
 
-## Step 2: Full automation with IBM RPA + IBM ODM
+## Full automation with IBM RPA + IBM ODM
 
 Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
 This is where IBM ODM will come handy.
