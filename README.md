@@ -20,6 +20,7 @@ This sample shows how to invoke IBM ODM from IBM RPA with Automation Anywhere th
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
      - [Running the sample](#running-the-sample)
   - [One step further: decision governance](#one-step-further-decision-governance)
+  - [Useful Links](#useful-links)
 
 ---
 
@@ -190,14 +191,14 @@ changing anything to the RPA tasks.
 
 This way, you can completely decouple the lifecycle and ownership of the decision logic from the RPA task authoring.
 
-## Useful Resources
+## Useful Links
 
-* [IBM Robotic Process Automation with Automation Anywhere and ODM](https://developer.ibm.com/odm/docs/solutions/ibm-rpa-automation-anywhere-odm/): 
-main portal for IBM RPA with Automation Anywhere and ODM integration
+* [IBM Robotic Process Automation with Automation Anywhere](https://developer.ibm.com/bpm/docs/ibm-robotic-process-automation-automation-anywhere/): 
+main portal for IBM RPA with Automation Anywhere and IBM BPM / ODM integration scenarios.
 * [Using ODM to make a decision within an RPA activity](https://git.ng.bluemix.net/aswapnil/odm-rpa-integration-samples/blob/master/docs/odm-decisions-in-rpa): 
 a sample describing how to invoke ODM from RPA through a ['JSON' metabot](https://git.ng.bluemix.net/IBMBPMCommunity/rpa-IntegrationSamples/blob/master/assets/metabots/JSON.mbot). 
 * [Automation Anywhere and IBM ODM](https://www.linkedin.com/pulse/automation-anywhere-ibm-odm-neil-kolban): a tutorial video 
-from [Neil Kolban](https://www.linkedin.com/in/kolban/) showing how to fill in an Excel spreadsheet from IBM RPA, requesting values from IBM ODM through a SOAP call
+from [Neil Kolban](https://www.linkedin.com/in/kolban/) (Salient Process) showing how to fill in an Excel spreadsheet from IBM RPA, requesting values from IBM ODM through a SOAP call
 
 # Issues and contributions
 For issues relating to this sample, please use the [GitHub issue tracker](../../issues).
