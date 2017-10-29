@@ -190,6 +190,15 @@ changing anything to the RPA tasks.
 
 This way, you can completely decouple the lifecycle and ownership of the decision logic from the RPA task authoring.
 
+## Useful Resources
+
+* [IBM Robotic Process Automation with Automation Anywhere and ODM](https://developer.ibm.com/odm/docs/solutions/ibm-rpa-automation-anywhere-odm/): 
+main portal for IBM RPA with Automation Anywhere and ODM integration
+* [Using ODM to make a decision within an RPA activity](https://git.ng.bluemix.net/aswapnil/odm-rpa-integration-samples/blob/master/docs/odm-decisions-in-rpa): 
+a sample describing how to invoke ODM from RPA through a ['JSON' metabot](https://git.ng.bluemix.net/IBMBPMCommunity/rpa-IntegrationSamples/blob/master/assets/metabots/JSON.mbot). 
+* [Automation Anywhere and IBM ODM](https://www.linkedin.com/pulse/automation-anywhere-ibm-odm-neil-kolban): a tutorial video 
+from [Neil Kolban](https://www.linkedin.com/in/kolban/) showing how to fill in an Excel spreadsheet from IBM RPA, requesting values from IBM ODM through a SOAP call
+
 # Issues and contributions
 For issues relating to this sample, please use the [GitHub issue tracker](../../issues).
 We welcome contributions following [our guidelines](CONTRIBUTING.md).
