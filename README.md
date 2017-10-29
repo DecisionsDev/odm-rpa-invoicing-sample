@@ -116,7 +116,7 @@ From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywher
 ## Full automation with IBM RPA + IBM ODM
 
 Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
-This is where IBM ODM will come handy.
+This is where IBM ODM will come in handy.
 
 ### Create and deploy a Decision Service
 
@@ -153,7 +153,7 @@ generated form to invoke the decision service.
 
 ```bash
 npm install -g odm-decision-forms
-odm-decision-forms --decision http://localhost:9090/DecisionService --console http://localhost:9090/res
+odm-decision-forms --decisionservice http://localhost:9090/DecisionService --console http://localhost:9090/res
 ```
 
 *Note:* we assume that your ODM server is running at http://localhost:9090. You can change it to fit your installation.
@@ -177,6 +177,17 @@ price and category of each order,  and getting a tax rate, tax label, and discou
 ### Running the demo
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM.atmx`
+
+## A step further: decision governance
+
+Once the RPA tasks are ready, and the decision bot invocation is functional, you may synchronize your Decision Service 
+to [ODM Decision Center](https://www.ibm.com/support/knowledgecenter/en/SSQP76_8.9.0/com.ibm.odm.dcenter/topics/odm_dcenter.html) 
+in order to take advantage of its governance capabilities such as user permission, release management and testing.
+
+Each time a new version of your Decision Service is ready, simply redeploy it to your Decision Server Rules without 
+changing anything to the RPA tasks.
+
+This way, you can completely decouple the lifecycle and ownership of the decision logic from the RPA task authoring.
 
 # Issues and contributions
 For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
