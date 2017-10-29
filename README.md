@@ -1,6 +1,7 @@
 # ODM RPA Invoicing sample
 
-This sample shows how to integrate IBM Operational Decision Manager with IBM RPA.
+This sample shows how to integrate IBM Robotic Process Automation with Automation Anywhere and IBM Operational Decision Manager 
+through a Decision Bot.
 
 ## Table of Contents
 
