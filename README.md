@@ -16,9 +16,10 @@ This sample shows how to integrate IBM Operational Decision Manager with IBM RPA
      - [Running the demo](#running-the-demo)
   - [Full automation with IBM RPA + IBM ODM](#full-automation-with-ibm-rpa-ibm-odm)
      - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
-     - [Deploying a Decision bot](#deploying-a-decision-bot)
+     - [Deploying a Decision Bot](#deploying-a-decision-bot)
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
      - [Running the demo](#running-the-demo)
+  - [One step further: decision governance](#one-step-further-decision-governance)
 
 ---
 
@@ -178,7 +179,7 @@ price and category of each order,  and getting a tax rate, tax label, and discou
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM.atmx`
 
-## A step further: decision governance
+## One step further: decision governance
 
 Once the RPA tasks are ready, and the decision bot invocation is functional, you may synchronize your Decision Service 
 to [ODM Decision Center](https://www.ibm.com/support/knowledgecenter/en/SSQP76_8.9.0/com.ibm.odm.dcenter/topics/odm_dcenter.html) 
