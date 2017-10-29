@@ -149,8 +149,8 @@ A Decision Bot is an auto-generated form allowing to execute a Decision Service.
 generated, we will write an IBM RPA task to invoke it and get the tax and discounted price for each 
 order.
 
-You now need to install and run the odm-decision-forms contrib, which will provide you with a 
-generated form to invoke the decision service.
+You now need to install and run the [odm-decision-forms](https://www.npmjs.com/package/odm-decision-forms) npm package, 
+which will provide you with a generated form to invoke the decision service.
 
 ```bash
 npm install -g odm-decision-forms
@@ -161,7 +161,7 @@ odm-decision-forms --decisionservice http://localhost:9090/DecisionService --con
 
 Then open the following URL: [http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
 
-Test the bot by entering some input values and hit 'Run Decision'.
+Test the bot by entering some input values and hit *Run Decision*.
 You should get the following result:
 
 ![Decision Form](./screenshots/Decision_Form.png)
