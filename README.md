@@ -1,7 +1,6 @@
 # ODM RPA Invoicing sample
 
-This sample shows how to integrate IBM Robotic Process Automation with Automation Anywhere and IBM Operational Decision Manager 
-through a Decision Bot.
+This sample shows how to invoke IBM ODM from IBM RPA with Automation Anywhere through a simple Decision Bot.
 
 ## Table of Contents
 
@@ -9,17 +8,17 @@ through a Decision Bot.
      - [Required software](#required-software)
      - [Create an Invoicely account](#create-an-invoicely-account)
      - [Create a Credential vault in IBM RPA Control Room](#create-a-credential-vault-in-ibm-rpa-control-room)
-     - [Copy demo assets to your IBM RPA installation](#copy-demo-assets-to-your-ibm-rpa-installation)
+     - [Copy sample assets to your IBM RPA installation](#copy-sample-assets-to-your-ibm-rpa-installation)
   - [Scenario](#scenario)
   - [Automating invoice creation with IBM RPA](#automating-invoice-creation-with-ibm-rpa)
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
-     - [Running the demo](#running-the-demo)
+     - [Running the sample](#running-the-sample)
   - [Full automation with IBM RPA + IBM ODM](#full-automation-with-ibm-rpa-ibm-odm)
      - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
      - [Deploying a Decision Bot](#deploying-a-decision-bot)
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
-     - [Running the demo](#running-the-demo)
+     - [Running the sample](#running-the-sample)
   - [One step further: decision governance](#one-step-further-decision-governance)
 
 ---
@@ -28,7 +27,7 @@ through a Decision Bot.
 
 ### Required software
 
-Here are the software you need to install in order to run the demo:
+Here are the software you need to install in order to run the sample:
 
 * [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/) (IBM RPA)  leverages ODM to make it possible to automate desktop tasks that involve human judgements that can be captured as ODM decisions.
 * [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm) (ODM) provides a complete, easy-to-use system for automating day-to-day operational decisions and allows business people and IT staff to collaborate on business rules by using an interface and a language that are comfortable and intuitive for both.
@@ -50,7 +49,7 @@ Go to [invoicely.com](https://invoicely.com) and create an account
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
 
-### Copy demo assets to your IBM RPA installation
+### Copy sample assets to your IBM RPA installation
 
 Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client installation, typically 
 `C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks`
@@ -111,7 +110,7 @@ Here is the complete task:
 
 ![Main](./screenshots/Main.png)
 
-### Running the demo
+### Running the sample
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main.atmx`
 
@@ -176,7 +175,7 @@ price and category of each order,  and getting a tax rate, tax label, and discou
 
 ![Main with ODM](./screenshots/Main_ODM.png)
 
-### Running the demo
+### Running the sample
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM.atmx`
 
@@ -192,7 +191,7 @@ changing anything to the RPA tasks.
 This way, you can completely decouple the lifecycle and ownership of the decision logic from the RPA task authoring.
 
 # Issues and contributions
-For issues relating to this demo, please use the [GitHub issue tracker](../../issues).
+For issues relating to this sample, please use the [GitHub issue tracker](../../issues).
 We welcome contributions following [our guidelines](CONTRIBUTING.md).
 
 # License
