@@ -76,7 +76,7 @@ and saves the result in her [invoicely.com](invoicely.com) account.
 letting her define discounts and taxes on order items.
 
 We show here how **Abu** can leverage IBM RPA with Automation Anywhere to automate the reading and editing of invoices 
-and IBM ODM to compute the discounts and taxes for each order.
+and IBM ODM to compute the discounts and taxes of each order item.
 
 ## Automating invoice creation with RPA
 
