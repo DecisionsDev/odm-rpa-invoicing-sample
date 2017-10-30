@@ -199,17 +199,17 @@ in order to take advantage of its governance capabilities such as user permissio
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Connect.png" width="75%"></img>
 
-Each time a new version of the Decision Service is ready, **Abu** can simply redeploy it to Rule Execution Server without 
-changing anything to the RPA tasks.
+Should a discount or a tax need to be changed, **Bea** can simply connect to Decision Center and change the corresponding rule or
+decision table.
+
+<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_DT.png" width="75%"></img>
+
+Each time a new version of the Decision Service is ready, either **Abu** or **Bea** can redeploy it to Rule Execution Server without 
+having to change anything to the RPA tasks.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Deploy.png" width="75%"></img>
 
-Should a discount or a tax need to be changed, **Bea** simply connect to Decision Center and change the corresponding rule or
-decision table.
-
 This way, we have complete decoupling of the lifecycle and ownership of the decision logic from the RPA task authoring.
-
-<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_DT.png" width="75%"></img>
 
 ## Useful Links
 
