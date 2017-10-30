@@ -186,16 +186,16 @@ Once the RPA tasks are ready, and the decision bot invocation is functional, you
 to [ODM Decision Center](https://www.ibm.com/support/knowledgecenter/en/SSQP76_8.9.0/com.ibm.odm.dcenter/topics/odm_dcenter.html) 
 in order to take advantage of its governance capabilities such as user permission, release management and testing.
 
-![DC Connect](./screenshots/ODM_DC_Connect.png)
+<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Connect.png" width="75%"></img>
 
 Each time a new version of your Decision Service is ready, simply redeploy it to your Rule Execution Server without 
 changing anything to the RPA tasks.
 
-![DC Deploy](./screenshots/ODM_DC_Deploy.png)
+<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Deploy.png" width="75%"></img>
 
 This way, you can completely decouple the lifecycle and ownership of the decision logic from the RPA task authoring.
 
-![DC Author](./screenshots/ODM_DC_DT.png)
+<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_DT.png" width="75%"></img>
 
 ## Useful Links
 
