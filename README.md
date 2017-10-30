@@ -144,7 +144,7 @@ This Decision Service is made of:
 Once you have downloaded the [decision service](./assets/CompleteInvoice.zip), open it in ODM Rule Designer, and deploy 
 it to your local Rule Execution Server.
 
-<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_RD_Deploy.png" width="75%"></img>
+<img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_RD_Deploy.png" width="40%"></img>
 
 ### Deploying a Decision Bot
 
