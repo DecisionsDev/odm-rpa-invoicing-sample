@@ -59,7 +59,7 @@ Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client i
 
 **Bea** works for *Acme Retail*, a small retailing company selling books, newspapers, computers, groceries and clothing.
 
-**Jack** is a client of *Acme Retail*. Each week, he orders a list of goods to Bea, sending him 
+**Jack** is a client of *Acme Retail*. Each week, he orders a list of goods to Bea, sending her 
 <a target="_blank" href="./assets/aa/orders.csv">a CSV file </a> listing the quantity, category and unit price of each 
 item she wants to order.
 
