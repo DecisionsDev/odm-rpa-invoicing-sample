@@ -7,14 +7,14 @@ This sample shows how to invoke IBM ODM from IBM RPA with Automation Anywhere th
   - [Before you begin](#before-you-begin)
      - [Required software](#required-software)
      - [Create an Invoicely account](#create-an-invoicely-account)
-     - [Create a Credential vault in IBM RPA Control Room](#create-a-credential-vault-in-ibm-rpa-control-room)
-     - [Copy sample assets to your IBM RPA installation](#copy-sample-assets-to-your-ibm-rpa-installation)
+     - [Create a Credential vault in your Automation Anywhere Control Room](#create-a-credential-vault-in-your-automation-anywhere-control-room)
+     - [Copy sample assets to your Automation Anywhere installation](#copy-sample-assets-to-your-automation-anywhere-installation)
   - [Scenario](#scenario)
-  - [Automating invoice creation with IBM RPA](#automating-invoice-creation-with-ibm-rpa)
+  - [Automating invoice creation with RPA](#automating-invoice-creation-with-rpa)
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
      - [Running the sample](#running-the-sample)
-  - [Full automation with IBM RPA + IBM ODM](#full-automation-with-ibm-rpa-ibm-odm)
+  - [Full automation with RPA and ODM](#full-automation-with-rpa-and-odm)
      - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
      - [Deploying a Decision Bot](#deploying-a-decision-bot)
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
@@ -40,7 +40,7 @@ that generates a form on top of a Decision Service.
 
 Go to [invoicely.com](https://invoicely.com) and create an account
 
-### Create a Credential vault in IBM RPA Control Room
+### Create a Credential vault in your Automation Anywhere Control Room
 
 * Log in to Control Room
 * Go to the *Credential Manager* tab
@@ -50,7 +50,7 @@ Go to [invoicely.com](https://invoicely.com) and create an account
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
 
-### Copy sample assets to your IBM RPA installation
+### Copy sample assets to your Automation Anywhere installation
 
 Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client installation, typically 
 `C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks`
@@ -72,7 +72,7 @@ and saves the result in his invoicely account.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
 
-## Automating invoice creation with IBM RPA
+## Automating invoice creation with RPA
 
 Our first step consists of recording an Automation Anywhere task that reads the CSV file, and, for each row, connects 
 to [invoicely.com](http://invoicely.com) and create the corresponding invoice.
@@ -115,7 +115,7 @@ Here is the complete task:
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main.atmx`
 
-## Full automation with IBM RPA + IBM ODM
+## Full automation with RPA and ODM
 
 Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
 This is where IBM ODM will come in handy.
@@ -149,7 +149,7 @@ it to your local Rule Execution Server.
 ### Deploying a Decision Bot
 
 A Decision Bot is an auto-generated form allowing to execute a Decision Service. Once this form is 
-generated, we will write an IBM RPA task to invoke it and get the tax and discounted price for each 
+generated, we will write an RPA task to invoke it and get the tax and discounted price for each 
 order.
 
 You now need to install and run the [odm-decision-forms](https://www.npmjs.com/package/odm-decision-forms) npm package, 
@@ -206,7 +206,7 @@ main portal for IBM RPA with Automation Anywhere and IBM BPM / ODM integration s
 * [Using ODM to make a decision within an RPA activity](https://git.ng.bluemix.net/aswapnil/odm-rpa-integration-samples/blob/master/docs/odm-decisions-in-rpa): 
 a sample describing how to invoke ODM from RPA through a ['JSON' metabot](https://git.ng.bluemix.net/IBMBPMCommunity/rpa-IntegrationSamples/blob/master/assets/metabots/JSON.mbot). 
 * [Automation Anywhere and IBM ODM](https://www.linkedin.com/pulse/automation-anywhere-ibm-odm-neil-kolban): a tutorial video 
-from [Neil Kolban](https://www.linkedin.com/in/kolban/) (Salient Process) showing how to fill in an Excel spreadsheet from IBM RPA, requesting values from IBM ODM through a SOAP call
+from [Neil Kolban](https://www.linkedin.com/in/kolban/) (Salient Process) showing how to fill in an Excel spreadsheet from Automation Anywhere, requesting values from IBM ODM through a SOAP call
 
 # Issues and contributions
 For issues relating to this sample, please use the [GitHub issue tracker](../../issues).
