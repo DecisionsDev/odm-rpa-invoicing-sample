@@ -57,27 +57,34 @@ Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client i
 
 ## Scenario
 
-Jack works for Acme Retail, a small retailing company selling books, newspapers, computers, groceries and clothing.
+**Bea** works for *Acme Retail*, a small retailing company selling books, newspapers, computers, groceries and clothing.
 
-Andrea is a client of Acme Retail. Each week, she orders a list of goods to Jack, sending him 
+**Jack** is a client of *Acme Retail*. Each week, he orders a list of goods to Bea, sending him 
 <a target="_blank" href="./assets/aa/orders.csv">a CSV file </a> listing the quantity, category and unit price of each 
 item she wants to order.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Orders.png" width="75%"></img>
 
-Jack uses [invoicely.com](invoicely.com) to register invoices corresponding to Andrea's orders.
+**Bea** uses [invoicely.com](invoicely.com) to register invoices corresponding to **Jack**'s orders.
 
-Depending on the quantity and type of goods, he applies a tax rate and a discount to each row in the orders CSV
-and saves the result in his invoicely account.
+Depending on the quantity and type of goods, **Bea** applies a tax rate and a discount to each row in the orders CSV
+and saves the result in her [invoicely.com](invoicely.com) account.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Invoicely_Create.png" width="75%"></img>
+
+**Abu** is an IT consultant working for *Acme Retail*. **Bea** asks him to automate the invoicing process as much as possible while 
+letting her define discounts and taxes on order items.
+
+We show here how **Abu** can leverage IBM RPA with Automation Anywhere to automate the reading and editing of invoices 
+and IBM ODM to compute the discounts and taxes for each order.
 
 ## Automating invoice creation with RPA
 
 Our first step consists of recording an Automation Anywhere task that reads the CSV file, and, for each row, connects 
 to [invoicely.com](http://invoicely.com) and create the corresponding invoice.
 
-Since the tax rate and discounted price are not present in the CSV, we prompt the user during the process in order to get those values.
+Since the tax rate and discounted price are not present in the CSV, the RPA task will prompt **Bea** during the process 
+to let her enter those values.
 
 ### Creating the Invoice
 
@@ -117,7 +124,9 @@ From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywher
 
 ## Full automation with RPA and ODM
 
-Automation would be complete if we can avoid prompting the user with the tax rate and discounted price.
+Automation would be complete if we can avoid asking **Bea** to manually enter the tax rate and discounted price for each
+order.
+
 This is where IBM ODM will come in handy.
 
 ### Create and deploy a Decision Service
@@ -184,18 +193,21 @@ From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywher
 
 ## One step further: decision governance
 
-Once the RPA tasks are ready, and the decision bot invocation is functional, you may publish your Decision Service 
+Once the RPA tasks are ready and the decision bot invocation is functional, you may publish your Decision Service 
 to [ODM Decision Center](https://www.ibm.com/support/knowledgecenter/en/SSQP76_8.9.0/com.ibm.odm.dcenter/topics/odm_dcenter.html) 
 in order to take advantage of its governance capabilities such as user permission, release management and testing.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Connect.png" width="75%"></img>
 
-Each time a new version of your Decision Service is ready, simply redeploy it to your Rule Execution Server without 
+Each time a new version of the Decision Service is ready, **Abu** can simply redeploy it to Rule Execution Server without 
 changing anything to the RPA tasks.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Deploy.png" width="75%"></img>
 
-This way, you can completely decouple the lifecycle and ownership of the decision logic from the RPA task authoring.
+Should a discount or a tax need to be changed, **Bea** simply connect to Decision Center and change the corresponding rule or
+decision table.
+
+This way, we have complete decoupling of the lifecycle and ownership of the decision logic from the RPA task authoring.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_DT.png" width="75%"></img>
 
