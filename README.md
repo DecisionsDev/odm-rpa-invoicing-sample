@@ -199,7 +199,7 @@ in order to take advantage of its governance capabilities such as user permissio
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_Connect.png" width="75%"></img>
 
-Should a discount or a tax need to be changed, **Bea** can simply connect to Decision Center and change the corresponding rule or
+Should a discount or a tax need to be changed, **Bea** can simply connect to Decision Center and edit the corresponding rule or
 decision table.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_DC_DT.png" width="75%"></img>
