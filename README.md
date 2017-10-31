@@ -32,7 +32,7 @@ Here are the software you need to install in order to run the sample:
 
 * [IBM Robotic Process Automation with Automation Anywhere](https://www.ibm.com/cloud-computing/products/digital-process-automation/robotic-process-automation/) (IBM RPA)  leverages ODM to make it possible to automate desktop tasks that involve human judgements that can be captured as ODM decisions.
 * [IBM Operational Decision Manager](http://www-03.ibm.com/software/products/en/odm) (ODM) provides a complete, easy-to-use system for automating day-to-day operational decisions and allows business people and IT staff to collaborate on business rules by using an interface and a language that are comfortable and intuitive for both.
-* [NodeJS](https://nodejs.org/en/download/): needed to run the npm package below
+* [NodeJS](https://nodejs.org/en/download/) 8.x or greater: needed to run the npm package below
 * [ODM Decision Forms](https://www.npmjs.com/package/odm-decision-forms): an open source npm package provided by the ODM development team, 
 that generates a form on top of a Decision Service.
 
@@ -52,8 +52,9 @@ Go to [invoicely.com](https://invoicely.com) and create an account
 
 ### Copy sample assets to your Automation Anywhere installation
 
-Copy the directory [assets/aa](./assets/aa) to your Automation Anywhere client installation, typically 
-`C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks`
+Copy the content of the [assets/aa](./assets/aa) directory to the 'My Tasks' directory of your Automation Anywhere client 
+installation. The .atmx and .csv files should end up in a directory of the form  
+`C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Invoicing`.
 
 ## Scenario
 
@@ -171,7 +172,7 @@ odm-decision-forms --decisionservice http://localhost:9090/DecisionService --con
 
 *Note:* we assume that your ODM server is running at http://localhost:9090. You can change it to fit your installation.
 
-Then open the following URL: [http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
+Then open the following URL: [http://localhost:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
 
 Test the bot by entering some input values and hit *Run Decision*.
 You should get the following result:
