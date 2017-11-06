@@ -165,19 +165,34 @@ order.
 You now need to install and run the [odm-decision-forms](https://www.npmjs.com/package/odm-decision-forms) npm package, 
 which will provide you with a generated form to invoke the decision service.
 
+Make sure you have [NodeJS](https://nodejs.org/en/download/) 8.x or greater installed:
+
+```bash
+node --version
+```
+
+Install the *odm-decision-forms* npm package:
+
 ```bash
 npm install -g odm-decision-forms
+```
+
+Run the *odm-decision-forms* server:
+
+```bash
 odm-decision-forms --decisionservice http://localhost:9090/DecisionService --console http://localhost:9090/res
 ```
 
 *Note:* we assume that your ODM server is running at http://localhost:9090. You can change it to fit your installation.
 
-Then open the following URL: [http://localhost:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://0.0.0.0:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
+Then open the following URL: [http://localhost:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://localhost:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
 
 Test the bot by entering some input values and hit *Run Decision*.
 You should get the following result:
 
 ![Decision Form](./screenshots/Decision_Form.png)
+
+*Tip*: you can see the list of generated forms for each deployed ruleset at [http://localhost:3000](http://localhost:3000)
 
 ### Invoke the Decision Bot from RPA
 
