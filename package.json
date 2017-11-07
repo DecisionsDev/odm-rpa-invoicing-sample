@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "Antoine Melki",
   "license": "Apache 2.0",
-  "description": "This sample describe how to integrate IBM Operational Decision Manager with IBM RPA.",
+  "description": "This sample describes how to integrate IBM Operational Decision Manager with IBM RPA with Automation Anywhere.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ODMDev/odm-rpa-invoicing-sample.git"
