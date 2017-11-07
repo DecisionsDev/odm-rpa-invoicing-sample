@@ -15,10 +15,9 @@
     "node": ">= 8.0.0"
   },
   "keywords": [
-    "cms",
-    "json",
-    "headless",
-    "node"
+    "odm",
+    "rpa",
+    "decision"
   ],
   "scripts": {
     "build": "toctoc README.md -w"
