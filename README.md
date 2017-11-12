@@ -112,7 +112,7 @@ a unit price, a quantity, an order id, an item description, a tax rate, and a cl
 
     ![Create Invoice 1](./screenshots/CreateInvoice_02.png)
 
-Notice that the tax and unit price are not part of the orders CSV and their computation may not be straightforward, 
+    Notice that the tax and unit price are not part of the orders CSV and their computation may not be straightforward, 
 depending on the order items.
 
 3. Set client information, save and logout
