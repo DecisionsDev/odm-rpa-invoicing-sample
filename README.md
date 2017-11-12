@@ -146,7 +146,7 @@ order.
 This is where IBM ODM will provide agility and enable the bot to handle more complex business logic than it could before 
 in an easy to use format of decision tables or natural language rules.
 
-*Note*: the RPA bots described in this section are provided in the [assets](./assets) directory. See instructions [here](#before-you-begin).
+*Note*: the RPA bots and decision service described in this section are provided in the [assets](./assets) directory. See instructions [here](#before-you-begin).
 
 ### Create a Decision Service with extended business logic and Deploy
 
