@@ -8,14 +8,15 @@ This sample shows how to invoke IBM ODM from IBM RPA with Automation Anywhere th
      - [Required software](#required-software)
      - [Create an Invoicely account](#create-an-invoicely-account)
      - [Create a Credential vault in your Automation Anywhere Control Room](#create-a-credential-vault-in-your-automation-anywhere-control-room)
-     - [Copy sample assets to your Automation Anywhere installation](#copy-sample-assets-to-your-automation-anywhere-installation)
+     - [Copy sample RPA assets to your Automation Anywhere installation](#copy-sample-rpa-assets-to-your-automation-anywhere-installation)
+     - [Import the sample Decision Service in Rule Designer](#import-the-sample-decision-service-in-rule-designer)
   - [Scenario](#scenario)
   - [Automating invoice creation with RPA](#automating-invoice-creation-with-rpa)
      - [Creating the Invoice](#creating-the-invoice)
      - [Main Loop](#main-loop)
      - [Running the sample](#running-the-sample)
   - [Full automation with RPA and ODM](#full-automation-with-rpa-and-odm)
-     - [Create and deploy a Decision Service](#create-and-deploy-a-decision-service)
+     - [Create a Decision Service with extended business logic and Deploy](#create-a-decision-service-with-extended-business-logic-and-deploy)
      - [Deploying a Decision Bot](#deploying-a-decision-bot)
      - [Invoke the Decision Bot from RPA](#invoke-the-decision-bot-from-rpa)
      - [Running the sample](#running-the-sample)
@@ -25,6 +26,9 @@ This sample shows how to invoke IBM ODM from IBM RPA with Automation Anywhere th
 ---
 
 ## Before you begin
+
+All RPA bots and ODM Decision Service described in this sample can be downloaded from the
+ [assets/aa](./assets/aa) directory.
 
 ### Required software
 
@@ -50,11 +54,17 @@ Go to [invoicely.com](https://invoicely.com) and create an account
    * **email**: email you used to create your Invoicely account.
    * **password**: password for your account
 
-### Copy sample assets to your Automation Anywhere installation
+### Copy sample RPA assets to your Automation Anywhere installation
 
 Copy the content of the [assets/aa](./assets/aa) directory to the 'My Tasks' directory of your Automation Anywhere client 
 installation. The .atmx and .csv files should end up in a directory of the form  
 `C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Invoicing`.
+
+### Import the sample Decision Service in Rule Designer
+
+* Download [CompleteInvoice.zip](./assets/odm/CompleteInvoice.zip) decision service
+* Open Rule Designer
+* Import the downloaded zip in your workspace with *File > Import > Archive file*
 
 ## Scenario
 
@@ -87,9 +97,11 @@ to [invoicely.com](http://invoicely.com) and create the corresponding invoice.
 Since the tax rate and discounted price are not present in the CSV, the RPA task will prompt **Bea** during the process 
 to let her enter those values.
 
+*Note*: the RPA bots described in this section are provided in the [assets](./assets) directory. See instructions [here](#before-you-begin).
+
 ### Creating the Invoice
 
-The [Create Invoice.atmx](./assets/aa/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
+The [Create Invoice.atmx](./assets/aa/Invoicing/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
 a unit price, a quantity, an order id, an item description, a tax rate, and a client first name and last name.
 
 1. Login, create Invoice, set order ID, description and quantity
@@ -100,13 +112,16 @@ a unit price, a quantity, an order id, an item description, a tax rate, and a cl
 
     ![Create Invoice 1](./screenshots/CreateInvoice_02.png)
 
+Notice that the tax and unit price are not part of the orders CSV and their computation may not be straightforward, 
+depending on the order items.
+
 3. Set client information, save and logout
 
     ![Create Invoice 1](./screenshots/CreateInvoice_03.png)
 
 ### Main Loop
 
-The [Main.atmx](./assets/aa/Main.atmx) task does the following:
+The [Main.atmx](./assets/aa/Invoicing/Main.atmx) task does the following:
 * Opens orders CSV file
 * For each row
    * Prompt the user with the tax rate and discounted price
@@ -128,9 +143,12 @@ From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywher
 Automation would be complete if we can avoid asking **Bea** to manually enter the tax rate and discounted price for each
 order.
 
-This is where IBM ODM will come in handy.
+This is where IBM ODM will provide agility and enable the bot to handle more complex business logic than it could before 
+in an easy to use format of decision tables or natural language rules.
 
-### Create and deploy a Decision Service
+*Note*: the RPA bots described in this section are provided in the [assets](./assets) directory. See instructions [here](#before-you-begin).
+
+### Create a Decision Service with extended business logic and Deploy
 
 In ODM, we create a [Decision Service](./assets/odm/CompleteInvoice.zip) that takes a category, price and quantity as input, 
 and returns a discounted unit price and a tax rate and label.
@@ -151,7 +169,7 @@ This Decision Service is made of:
 
    <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/Discount_rule.png" width="50%"></img>
 
-Once you have downloaded the [decision service](./assets/CompleteInvoice.zip), open it in ODM Rule Designer, and deploy 
+Once you have downloaded the [decision service](./assets/odm/CompleteInvoice.zip), open it in ODM Rule Designer, and deploy 
 it to your local Rule Execution Server.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_RD_Deploy.png" width="50%"></img>
@@ -196,7 +214,7 @@ You should get the following result:
 
 ### Invoke the Decision Bot from RPA
 
-We can now amend our [main loop](./assets/aa/Main%20with%20ODM.atmx). 
+We can now amend our [main loop](./assets/aa/Invoicing/Main%20with%20ODM.atmx). 
 
 Instead of prompting the user, we use standard RPA object cloning to invoke our Decision Bot, passing the quantity, unit 
 price and category of each order,  and getting a tax rate, tax label, and discounted price.
