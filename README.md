@@ -224,7 +224,7 @@ We then create a [MetaBot](./assets/aa//My%20MetaBots/Invoicing%20Decision%20Bot
 
 ### Invoke the Decision MetaBot from the Main RPA task
 
-Finally, we can now amend our [main loop](./assets/aa//My%20Tasks/Invoicing/Main%20with%20ODM%20metabot.atmx) calling
+Finally, we can amend our [main task](./assets/aa//My%20Tasks/Invoicing/Main%20with%20ODM%20metabot.atmx) calling
 ODM instead of prompting the user.
 The invocation of the MetaBot consists of mapping the task variables to/from input/output parameters of the MetaBot.
 
