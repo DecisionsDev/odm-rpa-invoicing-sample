@@ -234,6 +234,8 @@ The invocation of the MetaBot consists of mapping the task variables to/from inp
 
 From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM metabot.atmx`
 
+You can see a live demo of the running bot here: https://youtu.be/Z9QIBERy3k8
+
 ## One step further: decision governance
 
 Once the RPA tasks are ready and the decision bot is functional, you may publish your Decision Service 
