@@ -220,7 +220,7 @@ You should get the following result:
 We then create a [MetaBot](./assets/aa//My%20MetaBots/Invoicing%20Decision%20Bot.mbot) that will enter input data in the Decision Form,
  run the Decision Service, and get the results back as output parameters.
 
-![MetaBot](./screenshots/Action List.png)
+![MetaBot](./screenshots/Action%20List.png)
 
 ### Invoke the Decision MetaBot from the Main RPA task
 
