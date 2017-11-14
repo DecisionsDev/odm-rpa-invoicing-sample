@@ -56,9 +56,11 @@ Go to [invoicely.com](https://invoicely.com) and create an account
 
 ### Copy sample RPA assets to your Automation Anywhere installation
 
-Copy the content of the [assets/aa](./assets/aa) directory to the 'My Tasks' directory of your Automation Anywhere client 
-installation. The .atmx and .csv files should end up in a directory of the form  
-`C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Invoicing`.
+Copy the content of the [assets/aa](./assets/aa) directory to your Automation Anywhere client 
+document directory. 
+Typically, the .atmx and .csv files should end up in a directory of the form  
+`C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My Tasks\Invoicing`
+ and the metabot in a `C:\Users\Administrator\Documents\Automation Anywhere Files\Automation Anywhere\My MetaBots` directory.
 
 ### Import the sample Decision Service in Rule Designer
 
@@ -101,7 +103,7 @@ to let her enter those values.
 
 ### Creating the Invoice
 
-The [Create Invoice.atmx](./assets/aa/Invoicing/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
+The [Create Invoice.atmx](./assets/aa/Invoicing/My%20Tasks/Create%20Invoice.atmx) task creates an invoice in Invoicely, given
 a unit price, a quantity, an order id, an item description, a tax rate, and a client first name and last name.
 
 1. Login, create Invoice, set order ID, description and quantity
@@ -121,7 +123,7 @@ depending on the order items.
 
 ### Main Loop
 
-The [Main.atmx](./assets/aa/Invoicing/Main.atmx) task does the following:
+The [Main.atmx](./assets/aa/My%20Tasks/Invoicing/Main.atmx) task does the following:
 * Opens orders CSV file
 * For each row
    * Prompt the user with the tax rate and discounted price
@@ -136,7 +138,7 @@ Here is the complete task:
 
 ### Running the sample
 
-From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main.atmx`
+From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\Invoicing\Main.atmx`
 
 ## Full automation with RPA and ODM
 
@@ -174,10 +176,10 @@ it to your local Rule Execution Server.
 
 <img src="https://raw.githubusercontent.com/ODMDev/odm-rpa-invoicing-sample/master/screenshots/ODM_RD_Deploy.png" width="50%"></img>
 
-### Deploying a Decision Bot
+### Deploying a Decision Form
 
-A Decision Bot is an auto-generated form allowing to execute a Decision Service. Once this form is 
-generated, we will write an RPA task to invoke it and get the tax and discounted price for each 
+A Decision Form is an auto-generated form allowing to execute a Decision Service. Once this form is 
+generated, we will write an RPA MetaBot to invoke it and get the tax and discounted price for each 
 order.
 
 You now need to install and run the [odm-decision-forms](https://www.npmjs.com/package/odm-decision-forms) npm package, 
@@ -205,29 +207,35 @@ odm-decision-forms --decisionservice http://localhost:9090/DecisionService --con
 
 Then open the following URL: [http://localhost:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset](http://localhost:3000/ruleapp/CompleteInvoice_Ruleapp/CompleteInvoice_Ruleset)
 
-Test the bot by entering some input values and hit *Run Decision*.
+Test the form by entering some input values and hit *Run Decision*.
 You should get the following result:
 
 ![Decision Form](./screenshots/Decision_Form.png)
 
 *Tip*: you can see the list of generated forms for each deployed ruleset at [http://localhost:3000](http://localhost:3000)
 
-### Invoke the Decision Bot from RPA
+### Invoke the Decision From from an RPA MetaBot
 
-We can now amend our [main loop](./assets/aa/Invoicing/Main%20with%20ODM.atmx). 
+We then create a [MetaBot](./assets/aa//My%20MetaBots/Invoicing%20Decision%20Bot.mbot) that will enter input data in the Decision Form,
+ run the Decision Service, and get the results back as output parameters.
 
-Instead of prompting the user, we use standard RPA object cloning to invoke our Decision Bot, passing the quantity, unit 
-price and category of each order,  and getting a tax rate, tax label, and discounted price.
+![MetaBot](./screenshots/Action List.png)
 
-![Main with ODM](./screenshots/Main_ODM.png)
+### Invoke the Decision MetaBot from the Main RPA task
+
+Finally, we can now amend our [main loop](./assets/aa//My%20Tasks/Invoicing/Main%20with%20ODM%20metabot.atmx) calling
+ODM instead of prompting the user.
+The invocation of the MetaBot consists of mapping the task variables to/from input/output parameters of the MetaBot.
+
+![Main with ODM MetaBot](./screenshots/Main_ODM_MetaBot.png)
 
 ### Running the sample
 
-From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM.atmx`
+From the Automation Anywhere Client, simply run `%AA_INSTALL%\Automation Anywhere\My Tasks\aa\Main with ODM metabot.atmx`
 
 ## One step further: decision governance
 
-Once the RPA tasks are ready and the decision bot invocation is functional, you may publish your Decision Service 
+Once the RPA tasks are ready and the decision bot is functional, you may publish your Decision Service 
 to [ODM Decision Center](https://www.ibm.com/support/knowledgecenter/en/SSQP76_8.9.0/com.ibm.odm.dcenter/topics/odm_dcenter.html) 
 in order to take advantage of its governance capabilities such as user permission, release management and testing.
 
