@@ -23,6 +23,6 @@
     "build": "toctoc README.md -w"
   },
   "devDependencies": {
-    "toctoc": "^0.2.3"
+    "toctoc": "^0.2.4"
   }
 }
